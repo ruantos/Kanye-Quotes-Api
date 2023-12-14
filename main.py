@@ -1,8 +1,9 @@
 import requests
 import smtplib
+import os
 
-EMAIL = ""
-PASSWORD = ""
+EMAIL = os.environ.get("email")
+PASSWORD = os.environ.get("password")
 SUBJECT = "Motivational Morning Phrase"
 
 def send_email(message):
